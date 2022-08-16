@@ -5,7 +5,7 @@ services:
         image: mongo
 
     mongoexpress:
-        image: mongo-express
+        image: zapay/mongo-express
         ports:
             - "8081:8081"
         links:

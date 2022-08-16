@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 cd "$(dirname "$(readlink -f "$BASH_SOURCE")")"
 
-mongoExpressVersion="$(wget -qO- 'https://registry.npmjs.org/mongo-express' | jq -r '."dist-tags".latest')"
+mongoExpressVersion="$(wget -qO- 'https://registry.npmjs.org/@zapay-pagamentos/mongo-express' | jq -r '."dist-tags".latest')"
 
 echo "$mongoExpressVersion"
 
