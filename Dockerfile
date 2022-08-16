@@ -23,9 +23,9 @@ RUN set -eux; \
 
 COPY docker-entrypoint.sh /
 
-WORKDIR /node_modules/mongo-express
+WORKDIR /node_modules/@zapay-pagamentos/mongo-express
 
-COPY config.default.js /config.js
+RUN cp config.default.js config.js
 
 ENTRYPOINT [ "tini", "--", "/docker-entrypoint.sh"]
 CMD ["mongo-express"]
